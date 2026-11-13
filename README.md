@@ -1,5 +1,9 @@
 # matekOpera
 
+Nyilvános, bejelentkezés nélkül használható alkalmazás: https://hampg.github.io/matekOpera/
+
+A `main` ágra feltöltött változatokat a GitHub Actions teszteli, majd GitHub Pagesre publikálja. A Pages build `/matekOpera/` alapútvonalat használ, a Sites és helyi build továbbra is `/` alatt működik.
+
 Magyar nyelvű, reszponzív matematikagyakorló React + TypeScript + Vite alapon. A szülőmappában található nyelvi alkalmazástól független projekt.
 
 ## Indítás
