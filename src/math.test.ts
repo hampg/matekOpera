@@ -14,7 +14,7 @@ else assert.equal(op==='+'?nums[0]+nums[1]:op==='-'?nums[0]-nums[1]:nums[0]*nums
 assert.equal(t.hints.length,3);
 }});
 test('Geometriai érvényesség, kerület és terület',()=>{for(let i=0;i<2000;i++){
-const t=generate({...base,topic:'geometry'},i,i*19);const a=t.a!,b=t.b!,c=t.c!;assert.ok(Number.isInteger(t.answer));if(t.variant==='vertices'){assert.equal(t.answer,t.shape==='triangle'?3:4);continue;}if(t.variant==='side'){assert.equal(t.answer,a);continue;}if(t.variant==='compare'){assert.ok(t.answer>0);continue;}if(t.kind==='match'){assert.equal(t.pairs!.length,3);continue;}
+const t=generate({...base,topic:'geometry'},i,i*19);const a=t.a!,b=t.b!,c=t.c!;assert.ok(Number.isInteger(t.answer));if(t.unit==='m')assert.ok(!t.equation.includes('cm'));if(t.variant==='vertices'){assert.equal(t.answer,t.shape==='triangle'?3:4);continue;}if(t.variant==='side'){assert.equal(t.answer,a);continue;}if(t.variant==='compare'){assert.ok(t.answer>0);continue;}if(t.kind==='match'){assert.equal(t.pairs!.length,3);continue;}
 if(t.shape==='triangle'){assert.ok(a+b>c&&a+c>b&&b+c>a);assert.equal(a*a+b*b,c*c);assert.equal(t.answer,t.area?a*b/2:a+b+c);}
 else assert.equal(t.answer,t.area?a*b:2*(a+b));assert.ok(t.hints[2].includes(String(t.answer)));
 }});
